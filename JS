@@ -2,8 +2,8 @@ let toDoInput = document.querySelector("#do");
 let addBtn = document.querySelector("#add");
 let toDoUl = document.querySelector("#toDoUl");
 let completeUl = document.querySelector("#completed");
-let applyIcon = `<i class="fa-solid fa-check"></i>`
-let markIcon = `<i class="fa-solid fa-xmark"></i>`
+let applyIcon = `<i class="fa-solid fa-check"></i>`;
+let markIcon = `<i class="fa-solid fa-xmark"></i>`;
 
 
 function addToDo(){
@@ -14,61 +14,61 @@ function addToDo(){
             }else{
                 let createLi = document.createElement("li");
                 createLi.append(toDoInput.value);
-                createLi.style.fontSize = "22px"
-                createLi.style.marginTop = "20px"
-                let successButton = document.createElement("button")
-                successButton.setAttribute("id", "successButton")
-                let deleteButton = document.createElement("button")
-                deleteButton.setAttribute("id", "deleteButton")
-                deleteButton.innerHTML = markIcon
-                deleteButton.style.marginLeft = "5px"
-                deleteButton.style.width = "30px"
-                deleteButton.style.height = "27px"
+                createLi.style.fontSize = "22px";
+                createLi.style.marginTop = "20px";
+                let successButton = document.createElement("button");
+                successButton.setAttribute("id", "successButton");
+                let deleteButton = document.createElement("button");
+                deleteButton.setAttribute("id", "deleteButton");
+                deleteButton.innerHTML = markIcon;
+                deleteButton.style.marginLeft = "5px";
+                deleteButton.style.width = "30px";
+                deleteButton.style.height = "27px";
                 successButton.innerHTML = applyIcon;
-                successButton.style.marginLeft = "5px"
-                successButton.style.width = "30px"
-                successButton.style.height = "27px"
-                createLi.append(successButton)
-                createLi.append(deleteButton)
-                toDoUl.append(createLi)
-                toDoInput.value = " " 
+                successButton.style.marginLeft = "5px";
+                successButton.style.width = "30px";
+                successButton.style.height = "27px";
+                createLi.append(successButton);
+                createLi.append(deleteButton);
+                toDoUl.append(createLi);
+                toDoInput.value = " " ;
 
                 function addCompleted(){
                     successButton.addEventListener("click", (event) => {
-                        let newLi = document.createElement("li") 
-                        newLi.style.fontSize = "25px"
-                        newLi.style.color = "darkred"
-                        newLi.append(event.target.parentElement.parentElement.textContent)
-                        completeUl.append(newLi)
-                        let element = event.target.parentElement.parentElement
-                        element.remove()
+                        let newLi = document.createElement("li") ;
+                        newLi.style.fontSize = "25px";
+                        newLi.style.color = "darkred";
+                        newLi.append(event.target.parentElement.parentElement.textContent);
+                        completeUl.append(newLi);
+                        let element = event.target.parentElement.parentElement;
+                        element.remove();
                     })
                 }  
 
-                addCompleted()
+                addCompleted();
 
                 function deleteCompleted(){
                     deleteButton.addEventListener("click", event => {
-                      let element = event.target.parentElement.parentElement
-                      element.remove()
-                    } )
+                      let element = event.target.parentElement.parentElement;
+                      element.remove();
+                    } );
                 }
                 
-                deleteCompleted()
+                deleteCompleted();
             }
             
         }
-    })
+    });
 }
 
 function onKeyEnter(){
     toDoInput.addEventListener("keypress", (event) => {
         if(event.key === "Enter"){
-            addBtn.click()
+            addBtn.click();
         }
-    })
+    });
 }
 
 
-addToDo()
-onKeyEnter()
+addToDo();
+onKeyEnter();
