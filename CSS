@@ -1,0 +1,61 @@
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: rgba(0, 0, 0, 0.436);
+        }
+        
+        li{
+            list-style-type:upper-roman;
+            text-align: start;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        input{
+            width: 400px;
+            height: 35px;
+            font-size: 19px;
+            border: 1px solid crimson;
+            border-radius: 6px;
+            margin-top: 5px;
+        }
+
+        label{
+            font-size: 30px;
+        }
+
+        h2{
+            margin-bottom: 8px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        i{
+            padding: 7px;
+        }
+
+        #container{
+            background-color: orange;
+            text-align: center;
+        }
+
+        #main{
+            display: flex;
+            justify-content:space-evenly;
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        #add{
+            width: 70px;
+            height: 30px;
+            margin-top: 15px;
+            background-color: lightcyan;
+            border: 1px solid navy;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
